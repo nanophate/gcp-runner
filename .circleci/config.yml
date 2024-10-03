@@ -1,12 +1,12 @@
 version: 2.1
-workflows:
-  testing:
-    jobs:
-      - runner-test
 jobs:
-  runner-test:
-    machine: true
-    resource_class: nanophate/vm-gcp
+  build:
+    docker:
+      - image: cimg/base:current
+    resource_class: nanophate/gke-runner
     steps:
-      - run: echo "Hi I'm on Runners!"
-      - run: sleep 500 
+      - run: echo "Hi I'm on a Container Runner!"
+workflows:
+  build-workflow:
+    jobs:
+      - build
