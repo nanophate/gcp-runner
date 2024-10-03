@@ -15,12 +15,12 @@ jobs:
     steps:
       - run: echo "Hi I'm on gke-runner-1!"
 
-  build-gke-runner-2:
-    docker:
-      - image: cimg/base:current
-    resource_class: "nanophate/gke-runner-2"
-    steps:
-      - run: echo "Hi I'm on gke-runner-2!"
+#  build-gke-runner-2:
+#    docker:
+#      - image: cimg/base:current
+#    resource_class: "nanophate/gke-runner-2"
+#    steps:
+#      - run: echo "Hi I'm on gke-runner-2!"
 
   build-gke-runner-3:
     docker:
@@ -146,7 +146,7 @@ workflows:
     jobs:
       - build-gke-runner
       - build-gke-runner-1
-      - build-gke-runner-2
+      # - build-gke-runner-2
       - build-gke-runner-3
       - build-gke-runner-4
       - build-gke-runner-5
