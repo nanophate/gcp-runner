@@ -1,15 +1,14 @@
 version: 2.1
 
-parameters:
-  runner_name:
-    type: string
-    default: "gke-runner"
-
 jobs:
   build:
     docker:
       - image: cimg/base:current
     resource_class: nanophate/<< parameters.runner_name >>
+  parameters:
+    runner_name:
+      type: string
+      default: "gke-runner"
     steps:
       - run: echo "Hi I'm on a Container Runner!"
 workflows:
