@@ -9,7 +9,7 @@ jobs:
   build:
     docker:
       - image: cimg/base:current
-    resource_class: nanophate/<< matrix.runner_name >>
+    resource_class: nanophate/<< parameters.runner_name >>
     steps:
       - run: echo "Hi I'm on a Container Runner!"
 workflows:
@@ -18,9 +18,4 @@ workflows:
       - build:
           matrix:
             parameters:
-              runner_name:  [
-                  "gke-runner-1", "gke-runner-2", "gke-runner-3", "gke-runner-4", "gke-runner-5",
-                  "gke-runner-6", "gke-runner-7", "gke-runner-8", "gke-runner-9", "gke-runner-10",
-                  "gke-runner-11", "gke-runner-12", "gke-runner-13", "gke-runner-14", "gke-runner-15",
-                  "gke-runner-16", "gke-runner-17", "gke-runner-18", "gke-runner-19"
-                ]
+              runner_name:  [ "gke-runner", "gke-runner-1", "gke-runner-2", "gke-runner-3", "gke-runner-4", "gke-runner-5", "gke-runner-6", "gke-runner-7", "gke-runner-8", "gke-runner-9", "gke-runner-10", "gke-runner-11", "gke-runner-12", "gke-runner-13", "gke-runner-14", "gke-runner-15", "gke-runner-16", "gke-runner-17", "gke-runner-18", "gke-runner-19" ]
