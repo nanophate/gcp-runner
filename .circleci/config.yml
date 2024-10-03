@@ -1,20 +1,166 @@
 version: 2.1
 
 jobs:
-  build:
+  build-gke-runner:
     docker:
       - image: cimg/base:current
-    resource_class: nanophate/<< parameters.runner_name >>
-  parameters:
-    runner_name:
-      type: string
-      default: "gke-runner"
+    resource_class: "nanophate/gke-runner"
     steps:
-      - run: echo "Hi I'm on a Container Runner!"
+      - run: echo "Hi I'm on gke-runner!"
+
+  build-gke-runner-1:
+    docker:
+      - image: cimg/base:current
+    resource_class: "nanophate/gke-runner-1"
+    steps:
+      - run: echo "Hi I'm on gke-runner-1!"
+
+  build-gke-runner-2:
+    docker:
+      - image: cimg/base:current
+    resource_class: "nanophate/gke-runner-2"
+    steps:
+      - run: echo "Hi I'm on gke-runner-2!"
+
+  build-gke-runner-3:
+    docker:
+      - image: cimg/base:current
+    resource_class: "nanophate/gke-runner-3"
+    steps:
+      - run: echo "Hi I'm on gke-runner-3!"
+
+  build-gke-runner-4:
+    docker:
+      - image: cimg/base:current
+    resource_class: "nanophate/gke-runner-4"
+    steps:
+      - run: echo "Hi I'm on gke-runner-4!"
+
+  build-gke-runner-5:
+    docker:
+      - image: cimg/base:current
+    resource_class: "nanophate/gke-runner-5"
+    steps:
+      - run: echo "Hi I'm on gke-runner-5!"
+
+  build-gke-runner-6:
+    docker:
+      - image: cimg/base:current
+    resource_class: "nanophate/gke-runner-6"
+    steps:
+      - run: echo "Hi I'm on gke-runner-6!"
+
+  build-gke-runner-7:
+    docker:
+      - image: cimg/base:current
+    resource_class: "nanophate/gke-runner-7"
+    steps:
+      - run: echo "Hi I'm on gke-runner-7!"
+
+  build-gke-runner-8:
+    docker:
+      - image: cimg/base:current
+    resource_class: "nanophate/gke-runner-8"
+    steps:
+      - run: echo "Hi I'm on gke-runner-8!"
+
+  build-gke-runner-9:
+    docker:
+      - image: cimg/base:current
+    resource_class: "nanophate/gke-runner-9"
+    steps:
+      - run: echo "Hi I'm on gke-runner-9!"
+
+  build-gke-runner-10:
+    docker:
+      - image: cimg/base:current
+    resource_class: "nanophate/gke-runner-10"
+    steps:
+      - run: echo "Hi I'm on gke-runner-10!"
+
+  build-gke-runner-11:
+    docker:
+      - image: cimg/base:current
+    resource_class: "nanophate/gke-runner-11"
+    steps:
+      - run: echo "Hi I'm on gke-runner-11!"
+
+  build-gke-runner-12:
+    docker:
+      - image: cimg/base:current
+    resource_class: "nanophate/gke-runner-12"
+    steps:
+      - run: echo "Hi I'm on gke-runner-12!"
+
+  build-gke-runner-13:
+    docker:
+      - image: cimg/base:current
+    resource_class: "nanophate/gke-runner-13"
+    steps:
+      - run: echo "Hi I'm on gke-runner-13!"
+
+  build-gke-runner-14:
+    docker:
+      - image: cimg/base:current
+    resource_class: "nanophate/gke-runner-14"
+    steps:
+      - run: echo "Hi I'm on gke-runner-14!"
+
+  build-gke-runner-15:
+    docker:
+      - image: cimg/base:current
+    resource_class: "nanophate/gke-runner-15"
+    steps:
+      - run: echo "Hi I'm on gke-runner-15!"
+
+  build-gke-runner-16:
+    docker:
+      - image: cimg/base:current
+    resource_class: "nanophate/gke-runner-16"
+    steps:
+      - run: echo "Hi I'm on gke-runner-16!"
+
+  build-gke-runner-17:
+    docker:
+      - image: cimg/base:current
+    resource_class: "nanophate/gke-runner-17"
+    steps:
+      - run: echo "Hi I'm on gke-runner-17!"
+
+  build-gke-runner-18:
+    docker:
+      - image: cimg/base:current
+    resource_class: "nanophate/gke-runner-18"
+    steps:
+      - run: echo "Hi I'm on gke-runner-18!"
+
+  build-gke-runner-19:
+    docker:
+      - image: cimg/base:current
+    resource_class: "nanophate/gke-runner-19"
+    steps:
+      - run: echo "Hi I'm on gke-runner-19!"
+
 workflows:
   build-workflow:
     jobs:
-      - build:
-          matrix:
-            parameters:
-              runner_name:  [ "gke-runner", "gke-runner-1", "gke-runner-2", "gke-runner-3", "gke-runner-4", "gke-runner-5", "gke-runner-6", "gke-runner-7", "gke-runner-8", "gke-runner-9", "gke-runner-10", "gke-runner-11", "gke-runner-12", "gke-runner-13", "gke-runner-14", "gke-runner-15", "gke-runner-16", "gke-runner-17", "gke-runner-18", "gke-runner-19" ]
+      - build-gke-runner
+      - build-gke-runner-1
+      - build-gke-runner-2
+      - build-gke-runner-3
+      - build-gke-runner-4
+      - build-gke-runner-5
+      - build-gke-runner-6
+      - build-gke-runner-7
+      - build-gke-runner-8
+      - build-gke-runner-9
+      - build-gke-runner-10
+      - build-gke-runner-11
+      - build-gke-runner-12
+      - build-gke-runner-13
+      - build-gke-runner-14
+      - build-gke-runner-15
+      - build-gke-runner-16
+      - build-gke-runner-17
+      - build-gke-runner-18
+      - build-gke-runner-19
